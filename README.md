@@ -12,3 +12,6 @@
 ### HTML
 ### CSS
 ### JAVASCRIPT kullanılarak hazırlanmıştır
+
+## Görseli ektedir.
+![Drum Kit web sitesi](https://github.com/user-attachments/assets/50a1b607-9bdc-4b12-8dd4-b1e62b7c75ae)
