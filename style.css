@@ -1,0 +1,94 @@
+body{
+    background-color:rgb(25, 52, 73);
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 60px;
+}
+h1{
+    font-weight:bold;
+    font-size: 80px;
+}
+
+.drum-kit {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.drum {
+    font-size: 2.2rem;
+    width: 80px;
+    height: 80px;
+    margin: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(69, 132, 239, 0.864);
+    color: white;
+    cursor:grab;
+}
+.drum:active,
+.drum.active {
+    background-color: rgb(69, 163, 240);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(1, 1, 67);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes shadowGlow {
+  0% { box-shadow: 0 0 5px #fff; }
+  50% { box-shadow: 0 0 20px #00ff00; }
+  100% { box-shadow: 0 0 5px #fff; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.drum.spin {
+  animation: spin 0.4s linear;
+}
+
+
+
+.drum.pulse {
+  animation: pulse 0.3s ease;
+}
+
+.drum.rotate {
+  animation: rotate 0.3s ease;
+}
+
+.drum.shadowGlow {
+  animation: shadowGlow 0.5s ease;
+}
+
+.drum.bounce {
+  animation: bounce 0.3s ease;
+}
+
+.drum.shake {
+  animation: shake 0.3s ease;
+}
